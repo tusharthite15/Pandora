@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pandora 2023 | National Level Hackathon</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Emilys Candy';
+    src: url('./fonts/EmilysCandy.ttf');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter.ttf');
+}
+
+@font-face {
+    font-family: 'Khmer';
+    src: url('./fonts/Khmer.ttf');
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url('./fonts/Urbanist.ttf');
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-bg-div{
+    width: 100%;
+    height: 120vh;
+    background-image: url('./images/college.png');
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding-top: 20px; */
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Inter';
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.web-logo-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pandora-name{
+    font-family: 'Urbanist';
+    font-weight: 800;
+    margin-left: 10px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 12px 10px;
+    margin-top: 20px;
+}
+.website-img{
+    width: auto;
+    height: 50px;
+}
+.nav-links-div{
+    margin-left: 300px;
+}
+
+.nav-links-div ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links{
+    /* color: #3f3121; */
+    color: #343434;
+    font-size: 15px;
+    /* font-weight: 550; */
+    margin: 0px 8px;
+}
+.nav-links:hover{
+    color: #A44AFF;
+}
+.nav-btn{
+    background-color: #A44AFF;
+    font-size: 15px;
+    padding: 5px 18px;
+    border-radius: 5px;
+    margin: 0px 6px;
+    color: white;
+    font-weight: bold;
+}
+.nav-btn:hover{
+    background-color: #8c19fe;
+}
+.black-gradient-div{
+    width: 100%;
+    height: 120vh;
+    background: rgb(0 0 0 / 69%);
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-div-heading{
+    margin-top: 30vh;
+    font-family: 'Emilys Candy';
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+.date-info-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+.date-info{
+    background-color: #00000094;
+    color: white;
+    text-align: center;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Urbanist';
+}
+.apply-now-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.apply-now-btn{
+    background-color: #A44AFF;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Urbanist';
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navbar-onscroll{
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 0px;
+    background: #ffffff5e;
+    backdrop-filter: blur(20px);
+}
+
+.section-2-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 40px;
+    height: 60vh;
+}
+
+.s2-left-div {
+    font-family: 'Emilys Candy', cursive;
+    font-size: 70px;
+    margin: 20px;
+    width: 500px;
+    color: #333333;
+}
+
+.s2-right-div {
+    font-family: 'Khmer', cursive;
+    font-size: 15px;
+    font-weight: 100;
+    margin: 30px;
+    width: 500px;
+    color: #333333;
+
+}
+
+.partners-and-sponsors-section{
+    background-color: #F4F8FF;
+    padding-top: 30px;
+}
+.partners-heading {
+    font-family: 'Emilys Candy', cursive;
+    font-size: 80px;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .line-1,.line-2 {
+    margin-bottom: 15px;
+  }
+  
+  .sponcers-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sponcers-img img {
+    height: 400px;
+    width: auto
+  }
+  
+  .sponcers-heading {
+    font-family: 'Emilys Candy', cursive;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 100px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+
+
+
+
+
+.section-6-div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px 20px;
+    margin: 40px 0px;
+}
+.s6-left-div{
+    font-family: 'Emilys Candy';
+    font-size: 65px;
+    padding: 0px 30px;
+    color: #333333;
+}
+.s6-right-div{
+    font-family: 'Khmer', cursive;
+    color: #333333;
+    font-size: 15px;
+    padding: 0px 20px;
+}
+.section-heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Emilys Candy';
+    font-size: 33px;
+    margin-bottom: 40px;
+}
+.faq-div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.faq-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 510px;
+    margin-top: 6px;
+    padding: 0px 15px;
+}
+.faq-content{
+    font-family: 'Khmer', cursive;
+}
+.dropdown-img{
+    width: auto;
+    height: 23px;
+    cursor: pointer;
+}
+.section-footer{
+    margin-top: 30px;
+    background-color: #64E9A9;
+    width: 100%;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0px;
+    font-family: 'Urbanist';
+    font-weight: 600;
+}
+.faq-answer-div{
+    display: none;
+    width: 500px;
+    padding: 5px 15px;    
+    font-family: 'Khmer', cursive;
+    color: #333333;
+    font-size: 14px;
+}
+
+.venue-heading{
+    margin-top: 30px;
+}
+
+.venue-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 50px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.venue-right{
+    font-family: 'Urbanist';
+    font-weight: 900;
+    color: #333333;
+    font-size: 30px;
+    padding: 0px 20px;
+}
+.venue-para{
+    font-size: 17px;
+    color: #666666;
+    font-weight: 400;
+    margin: 5px 0px;
+    margin-bottom: 15px;
+}
+.venue-btn{
+    background-color: #A44AFF;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.venue-btn a{
+    font-size: 15px;
+    padding: 8px 15px;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-weight: 400;
+}
+.college-img{
+    width: 35%;
+    height: 100%;
+}
+
+footer{
+    background-color: #cecece;
+    padding: 30px 30px;
+    padding-left: 70px;
+    margin-top: 30px;
+}
+.footer-logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.footer-heading{
+    font-family: 'Urbanist';
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 10px;
+}
+.sec-head{
+    font-family: 'Urbanist';
+    font-size: 18px;
+    font-weight: 900;
+    color: #3F3F3F;
+    margin-bottom: 10px;
+}
+
+.main-links{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+}
+.footer-links{
+    display: grid;
+}
+
+.footer-links a{
+    font-family: 'Urbanist';
+    font-weight: 500;
+    color: #3F3F3F;
+    padding: 5px 0px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar navbar-onscroll" id="navbar">
+            <div class="web-logo-div">
+                <img src="./images/logo.svg" alt="pandora-logo" class="website-img">
+                <!-- <img src="images/pandora.png" alt="pandora-logo" class="website-img"> -->
+                <!-- <div class="pandora-name">PANDORA</div> -->
+            </div>
+            <div class="nav-links-div">
+                <ul>
+                    <li><a href="" class="nav-links">About</a></li>
+                    <li><a href="" class="nav-links">Speakers</a></li>
+                    <li><a href="" class="nav-links">Schedule</a></li>
+                    <li><a href="" class="nav-links">Partners</a></li>
+                    <li><a href="" class="nav-links">Prizes</a></li>
+                    <li><a href="" class="nav-links">FAQs</a></li>
+                    <li><a href="" class="nav-links">Venue</a></li>
+                    <li><a href="" class="btn nav-btn">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main-bg-div">
+        <div class="black-gradient-div">
+            <div class="main-div-heading">
+                World's Biggest <br> Ethereum Hackathon
+            </div>
+            <div class="date-info-div">
+                <span class="date-info">April 28-29 - Kolhapur</span>
+            </div>
+            <div class="apply-now-div">
+                <a href="./step_1.html" class="apply-now-btn">Apply Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="section-2-div">
+        <div class="s2-left-div">
+            Celebrating <br> our love for <br>building
+        </div>
+        <div class="s2-right-div">
+            ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum. It’s a place where the leading minds in the Ethereum ecosystem are uniting with 1500+ builders from around the globe to build decentralized applications for the future. And we invite you to be one of them. Help us build a garden where everyone is self-sovereign, where everyone is an owner, where hierarchies don’t exist.
+        </div>
+    </div>
+    <div class="section-footer">
+        Innovate | collaborate | conquer
+    </div>
+
+    <section class="partners-and-sponsors-section">
+        <div class="section-heading">
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+            <div class="section-heading-text">Partners</div>
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+        </div>
+        <div class="sponcers-img">
+          <img src="images/merchants.png" alt="">
+        </div>
+        <div class="section-heading">
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+            <div class="section-heading-text">Sponsors</div>
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+        </div>
+        <div class="sponcers-img">
+          <img src="images/merchants.png" alt="">
+        </div>
+      </section>
+
+    <div class="section-6-div">
+        <div class="s6-left-div">
+            1 Lakh Rupees Pricepool
+        </div>
+        <div class="s6-right-div">
+            ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum. It’s a place where the leading minds in the Ethereum ecosystem are uniting with 1500+ builders from around the globe to build decentralized applications for the future. And we invite you to be one of them. Help us build a garden where everyone is self-sovereign, where everyone is an owner, where hierarchies don’t exist.
+        </div>
+    </div>
+    <div class="section-7-div">
+        <div class="section-heading">
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+            <div class="section-heading-text">Frequently asked questions</div>
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+        </div>
+
+        <div class="faq-div">
+            <svg width="500" height="2" viewBox="0 0 800 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1H800" stroke="#333333" stroke-width="0.5"/>
+            </svg>
+            <div class="faq-box">
+                <div class="faq-content">Who can participate?</div>
+                <img class="dropdown-img" src="./images/dropdown.png" alt="dropdown" id="faq-1">
+            </div>
+            <div class="faq-answer-div" id="faq-ans-1">
+                Lorem 1 ipsum dolor sit amet consectetur, adipisicing elit. Voluptates asperiores, cupiditate nihil, obcaecati officia labore mollitia, vero minus fuga sint facilis incidunt. Reprehenderit quidem mollitia veniam sapiente labore beatae magni?
+            </div>
+        </div>
+        <div class="faq-div">
+            <svg width="500" height="2" viewBox="0 0 800 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1H800" stroke="#333333" stroke-width="0.5"/>
+            </svg>
+            <div class="faq-box">
+                <div class="faq-content">When will the applications close?</div>
+                <img class="dropdown-img" src="./images/dropdown.png" alt="dropdown" id="faq-2">
+            </div>
+            <div class="faq-answer-div"  id="faq-ans-2">
+                Lorem 2 ipsum dolor sit amet consectetur, adipisicing elit. Voluptates asperiores, cupiditate nihil, obcaecati officia labore mollitia, vero minus fuga sint facilis incidunt. Reprehenderit quidem mollitia veniam sapiente labore beatae magni?
+            </div>
+        </div>
+        <div class="faq-div">
+            <svg width="500" height="2" viewBox="0 0 800 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1H800" stroke="#333333" stroke-width="0.5"/>
+            </svg>
+            <div class="faq-box">
+                <div class="faq-content">How does the application process work?</div>
+                <img class="dropdown-img" src="./images/dropdown.png" alt="dropdown" id="faq-3">
+            </div>
+            <div class="faq-answer-div" id="faq-ans-3">
+                Lorem 3 ipsum dolor sit amet consectetur, adipisicing elit. Voluptates asperiores, cupiditate nihil, obcaecati officia labore mollitia, vero minus fuga sint facilis incidunt. Reprehenderit quidem mollitia veniam sapiente labore beatae magni?
+            </div>
+        </div>
+        <div class="faq-div">
+            <svg width="500" height="2" viewBox="0 0 800 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 1H800" stroke="#333333" stroke-width="0.5"/>
+            </svg>
+            <div class="faq-box">
+                <div class="faq-content">How much does it cost?</div>
+                <img class="dropdown-img" src="./images/dropdown.png" alt="dropdown" id="faq-4">
+            </div>
+            <div class="faq-answer-div" id="faq-ans-4">
+                Lorem 4 ipsum dolor sit amet consectetur, adipisicing elit. Voluptates asperiores, cupiditate nihil, obcaecati officia labore mollitia, vero minus fuga sint facilis incidunt. Reprehenderit quidem mollitia veniam sapiente labore beatae magni?
+            </div>
+        </div>
+    </div>
+    <div class="section-footer">
+        Innovate | collaborate | conquer
+    </div>
+
+    <section class="venue">
+        <div class="section-heading venue-heading">
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+            <div class="section-heading-text">Venue</div>
+            <svg width="250" height="4" viewBox="0 0 217 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 3H217" stroke="#333333" stroke-width="5"/>
+            </svg>
+        </div>
+        <div class="venue-section">
+            <div class="venue-right">
+                <div class="venue-heading">
+                    D.Y Patil College of Engineering & Technology (DYPCET)
+                </div>
+                <div class="venue-para">
+                    <p>(An Autonomus Institute)</p>
+                    <p>Kasaba Bawada,Kolhapur</p>
+                </div>
+                <div class="venue-btn">
+                    <a href="">Get Location</a>
+                </div>
+            </div>
+            <!-- <div class="collage-img-div" > -->
+                <img src="images/college.jpg" alt="College" class="college-img">
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <footer>
+    
+        <div class="main-links">
+            <div class="sect-1">
+                <div class="sec-head">Quick Links</div>
+                <div class="footer-links">
+                    <a href="">About</a>
+                    <a href="">Speakers</a>
+                    <a href="">Schedule</a>
+                    <a href="">Partners</a>
+                    <a href="">Prices</a>
+                    <a href="">FAQs</a>
+                    <a href="">Venue</a>
+                </div>
+            </div>
+            <div class="sect-2">
+                <div class="sec-head">College Links</div>
+                <div class="footer-links">
+                    <a href="">College Website</a>
+                    <a href="">Admission</a>
+                    <a href="">Departments</a>
+                    <a href="">Application Form</a>
+                </div>
+            </div>
+            <div class="sect-3">
+                <div class="sec-head">Social Media</div>
+                <div class="footer-links">
+                    <a href="">Facebook</a>
+                    <a href="">Instagram</a>
+                    <a href="">Twitter</a>
+                    <a href="">Discord</a>
+                    <a href="">Whatsapp</a>
+                </div>
+            </div>
+            <div class="sect-4">
+                <div class="sec-head">Legal</div>
+                <div class="footer-links">
+                    <a href="">Privacy Policy</a>
+                    <a href="">Copyright</a>
+                    <a href="">Code of Conduct</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById('navbar');
+
+function myFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    // console.log("Activate")
+    navbar.classList.add('navbar-onscroll');
+  } 
+  else {
+    navbar.classList.remove('navbar-onscroll');
+  }
+}
+
+let faq_1 = document.getElementById('faq-1');
+let faq_2 = document.getElementById('faq-2');
+let faq_3 = document.getElementById('faq-3');
+let faq_4 = document.getElementById('faq-4');
+
+let faq_ans_1 = document.getElementById('faq-ans-1');
+let faq_ans_2 = document.getElementById('faq-ans-2');
+let faq_ans_3 = document.getElementById('faq-ans-3');
+let faq_ans_4 = document.getElementById('faq-ans-4');
+
+let faq_status_1 = false;
+let faq_status_2 = false;
+let faq_status_3 = false;
+let faq_status_4 = false;
+
+faq_1.addEventListener('click', function(){
+    if(faq_status_1===false){
+        faq_ans_1.style.display = 'block';
+        faq_status_1 = true;
+    }
+    else{
+        faq_ans_1.style.display = 'none';
+        faq_status_1 = false;
+    }
+});
+
+faq_2.addEventListener('click', function(){
+    if(faq_status_2===false){
+        faq_ans_2.style.display = 'block';
+        faq_status_2 = true;
+    }
+    else{
+        faq_ans_2.style.display = 'none';
+        faq_status_2 = false;
+    }
+});
+
+faq_3.addEventListener('click', function(){
+    if(faq_status_3===false){
+        faq_ans_3.style.display = 'block';
+        faq_status_3 = true;
+    }
+    else{
+        faq_ans_3.style.display = 'none';
+        faq_status_3 = false;
+    }
+});
+
+faq_4.addEventListener('click', function(){
+    if(faq_status_4===false){
+        faq_ans_4.style.display = 'block';
+        faq_status_4 = true;
+    }
+    else{
+        faq_ans_4.style.display = 'none';
+        faq_status_4 = false;
+    }
+});
+    </script>
+</body>
+</html>

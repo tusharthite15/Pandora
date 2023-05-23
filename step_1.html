@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Portal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&family=League+Spartan:wght@300&family=Montserrat:ital,wght@1,300;1,400&family=Poppins:wght@300&family=Urbanist:wght@400;600;700&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .bg{
+            width: 100%;
+            height: 100vh;
+        }
+        .main{            
+        width: 100%;
+        height: 100vh;
+        background: #000000bd;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+        .left{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo{
+            width: 250px;
+        }
+        .right{
+            width: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            width: 50%;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: block;
+            text-align: center;
+        }
+        .title{
+            font-family: 'Urbanist';
+            font-size: 32px;
+            font-weight: 800;
+            margin-top: 15px;
+    margin-bottom: 15px;
+        }
+        .steps{
+            display: block;
+    font-family: 'Urbanist';
+    font-size: 15px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.45);
+    text-align: left;
+    padding-left: 40px;
+        }
+        form{
+            width: 355px;
+            display: inline-grid;
+        }
+        select{
+    height: 46px;
+    border-radius: 7px;
+    background-color: #CBCBCB;
+    color: rgba(28, 45, 60, 0.77);
+    border: none;
+    font-family: 'Urbanist';
+    font-size: 15px;
+    font-weight: 520;
+    padding: 12px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+        }
+        input, input::placeholder{
+    border-radius: 7px;
+    background-color: #CBCBCB;
+    color: rgba(28, 45, 60, 0.77);
+    border: none;
+    font-family: 'Urbanist';
+    font-size: 15px;
+    font-weight: 520;
+    padding: 12px;
+    margin-bottom: 15px;
+        }
+        input[type=submit]{
+            border-radius: 100px;
+    width: 250px;
+    margin: 10px auto;
+    background: #3c6ae2db;
+    color: white;
+        }
+        .terms{
+            font-family:'Urbanist';
+    font-size: 12px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.45);
+    width: 300px;
+    margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<img class="bg" src="./images/college.png"/>
+<div class="main">
+    <div class="left">
+        <img class="logo" src="./images/logo.svg"/>
+    </div>
+    <div class="right">
+        <div class="box">
+            <div class="title">Registration</div>
+            <div class="steps">Step 1 of 3</div>
+            <form method="get" action="./create_team.php">
+                <select required name="theme" id="theme">
+                    <option value="">Theme</option>
+                    <option value="smart-city">Smart City</option>
+                    <option value="environment-sustainable">Environment Sustainable</option>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="health-care">Health Care</option>
+                </select>
+                <input type="text" required name="email" placeholder="Main Email-Id">
+                <input type="text" required name="name" placeholder="Team Name">
+                <input type="submit" value="Continue">
+            </form>
+            <div class="terms">By signing up, you agree to the Terms of Services and <br> Privacy Policy, including Cookie use.</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
